@@ -18,6 +18,8 @@ def result():
       parch = float(request.form.get('parch'))
       pclass = float(request.form.get('pclass'))
       embark = request.form.get('embark')
+      name = request.form.get('name')
+
 
       if pclass==1:
          Pclass_2 = 0
@@ -48,9 +50,9 @@ def result():
          prediction[i] = round(int(prediction[i]))
 
       if prediction ==0:
-         prediction = 'would not'
+         prediction = 'You may not have survived the titanic disaster!'
       else:
-         prediction = 'would'
+         prediction = 'Congragulation, you would have survived the disaster'
 
-      return render_template('result.html', prediction = prediction)
+      return render_template('result.html', prediction = prediction, name = name)
 app.run(debug = True)
