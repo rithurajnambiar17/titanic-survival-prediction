@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Titanic Survival Prediction</title>
+</head>
+<body>
+	<html>
+   <body>
+   <center>
+      <form action = "{{url_for('result')}}" method = "POST">
+        <label for="sex">Sex:</label>
+			<select name="sex" id="sex">
+  				<option value="0">0</option>
+  				<option value="1">1</option>
+  			</select>
+  		</label>
+
+         <p></p>
+         <p><label for="age"><b>Age</b></label> <br><input type = "number" name = "age" step="any"></p>
+
+         <label for="sib">No of Siblings Aboard:</label>
+		<select name="sib" id="sib">
+  				<option value="0">0</option>
+  				<option value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+  				<option value="4">4</option>
+			</select>
+		</label>
+<br>
+         <label for="parch">No of Parents of Children Aboard:</label>
+		<select name="parch" id="parch">
+  				<option value="0">0</option>
+  				<option value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+  				<option value="4">4</option>
+			</select>
+		</label>
+<br>
+         <label for="pclass">Choose Passenger Class:</label>
+		<select name="pclass" id="pclass">
+  				<option value="1">1</option>
+  				<option value="2">2</option>
+  				<option value="3">3</option>
+			</select>
+		</label>
+	
+<br>
+        <label for="embark">Choose Embarkment Port:</label>
+		<select name="embark" id="embark">
+  				<option value="S">S</option>
+  				<option value="C">C</option>
+  				<option value="Q">Q</option>
+			</select>
+		</label>
+
+         <p><input type = "submit" value = "Predict" ></p>
+      </form>
+   </center>
+   </body>
+</html>
+</body>
+</html>
