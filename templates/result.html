@@ -3,13 +3,23 @@
       <title>
          Prediction for Titanic Survival
       </title>
+      <link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+      <link href={{ url_for('static', filename='css/style.css') }} rel="stylesheet">
    </head>
    <body>
+      <header style="background-color: black;">
+			<div class="container d-flex align-items-center justify-content-lg-between">
+			<center>
+				<a><h1 class="logo me-auto me-lg-0">TITANIC SURVIVAL PREDICTION<span>.</span></a></h1>
+			</center>
+			</div>
+	   </header>
+      <br><br>
       <center>
-         <h1>According the data provided</h1>
-         <h2>{{name}}, <br>{{prediction}} </h2>
+         <h2>According the data provided</h2>
+         <h3>{{name}}, <br>{{prediction}} </h3>
          <a href = '/'>
-            <button>Back to Home</button>
+            <button class="btn-predict">Back to Home</button>
          </a>
       </center>
    </body>

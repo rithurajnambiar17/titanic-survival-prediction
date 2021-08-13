@@ -2,74 +2,96 @@
 <html>
 <head>
 	<title>Titanic Survival Prediction</title>
+	<link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+	<link href={{ url_for('static', filename='css/style.css') }} rel="stylesheet">
 </head>
 <body>
 	<html>
    <body>
 
-   <header>
-   		<center>
-   			<h1>Titanic Disaster Survival Prediction</h1>
-   		</center>
-   </header>
+	<header style="background-color: black;">
+			<div class="container d-flex align-items-center justify-content-lg-between">
+			<center>
+				<a><h1 class="logo me-auto me-lg-0">TITANIC SURVIVAL PREDICTION<span>.</span></a></h1>
+			</center>
+			</div>
+	</header>
 
+	<br><br>
    <center>
       <form action = "{{url_for('result')}}" method = "POST">
 
-      	<label for="pid"><b>PassengerId</b></label> <br><input type = "number" name = "pid" step="any"></p>
+		<div class="col-md-3 form-group">
+			<label for="pid">PassengerId</label><br>
+			<input type="number" name="pid" step="any" class="form-control">
+		</div><br>
 
-      	<label for="name"><b>Name</b></label> <br><input type = "text" name = "name" step="any"></p>
+		<div class="col-md-3 form-group">
+			<label for="name">Name</label><br>
+			<input type="text" name="name" class="form-control">
+		</div><br>
 
-        <label for="sex">Sex:</label>
-			<select name="sex" id="sex">
-  				<option value="0">female</option>
-  				<option value="1">male</option>
-  			</select>
-  		</label>
-<br>
-         <p></p>
-         <p><label for="age"><b>Age</b></label> <br><input type = "number" name = "age" step="any"></p>
-<br>
-
-         <label for="sib">No of Siblings Aboard:</label>
-		<select name="sib" id="sib">
-  				<option value="0">0</option>
-  				<option value="1">1</option>
-  				<option value="2">2</option>
-  				<option value="3">3</option>
-  				<option value="4">4</option>
+		<div class="col-md-3 form-group">
+			<label for="sex">Sex:</label><br>
+			<select name="sex" id="sex" class="form-control">
+					<option value="0">Female</option>
+					<option value="1">Male</option>
 			</select>
-		</label>
-<br>
-<br>
-         <label for="parch">No of Parents of Children Aboard:</label>
-		<select name="parch" id="parch">
-  				<option value="0">0</option>
-  				<option value="1">1</option>
-  				<option value="2">2</option>
-  				<option value="3">3</option>
-  				<option value="4">4</option>
-			</select>
-		</label>
-<br>
-<br>
-         <label for="pclass">Choose Passenger Class:</label>
-		<select name="pclass" id="pclass">
-  				<option value="1">1</option>
-  				<option value="2">2</option>
-  				<option value="3">3</option>
-			</select>
-		</label>
-	
-<br>
-<br>
-        <label for="embark">Choose Embarkment Port:</label><br>
-			<input type="radio" value="S", name = 'embark'><label>Southampton</label><br>
-			<input type="radio" value="C", name = 'embark'><label>Cherbourg</label><br>
-			<input type="radio" value="Q", name = 'embark'><label>Queenstown</label><br>
-		</label>
+		</div>
 
-         <p><input type = "submit" value = "Predict" ></p>
+			<br>
+
+
+		<div class="col-md-3 form-group">
+			<label for="sib">No of Siblings Aboard:</label><br>
+			<select name="sib" id="sib" class="form-control">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+			</select>
+		</div>
+		<br>
+
+		<div class="col-md-3 form-group">
+			<label for="age">Age</label><br>
+			<input type = "number" name = "age" step="any" class="form-control">
+		</div>
+
+		<div class="col-md-3 form-group">
+			<label for="parch">No of Parents of Children Aboard:</label><br>
+			<select name="parch" id="parch" class="form-control">
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+			</select>
+		</div><br>
+
+		<div class="col-md-3 form-group">
+			<label for="pclass">Choose Passenger Class:</label><br>
+			<select name="pclass" id="pclass" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+			</select>
+		</div>
+			<br>
+
+		<div class="col-md-3 form-group">
+			<label for="embark">Choose Embarkment Port:</label><br>
+			<select name="embark" id="embark" class="form-control">
+				<option value="S">Southampton</option>
+				<option value="C">Cherbourg</option>
+				<option value="Q">Queenstown</option>
+			</select>
+		</div>
+
+		<br>
+
+         <button type = "submit" value = "Predict" class="btn-predict">Predict</button>
       </form>
    </center>
    </body>
